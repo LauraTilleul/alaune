@@ -54,5 +54,11 @@ def extraction_stockage(journal):
 		insert_une(une)
 	return True
 
+def process_extraction():
+	journaux = ['lemonde', 'lepoint', 'lesechos', 'liberation', 'lefigaro'] # on peut en ajouter ...
+	for j in journaux:
+		extraction_stockage(journal):
+
 if __name__ == '__main__':
-	extraction_stockage('lepoint')
+	process_extraction():
+

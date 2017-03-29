@@ -1,5 +1,7 @@
 # -*- coding:utf-8-*-
-from extraction import CourrierInternational, LePoint, JournalduNet, LesEchos, LeDauphine, LaTribune, SudOuest, LeFigaro, LeParisien, _20minutes, LeMonde, OuestFrance
+
+from modele_donnees import *
+from model_extraction import CourrierInternational, LePoint, JournalduNet, LesEchos, LeDauphine, LaTribune, SudOuest, LeFigaro, LeParisien, _20minutes, LeMonde, OuestFrance
 
 def unes(journal):
 	if journal == 'courrier':
@@ -39,8 +41,18 @@ def unes(journal):
 		titres=_20minutes.unes(targetURL)
 	return titres, targetURL
 
+def extraction_stockage(journal):
+	titres = unes(journal)
+	target_URL = titres[1]
+	for t in titres[0]:
+		titre = t[0]
+		URL = t[1]
+		une = {}
+		une['nom_court_quotidien'] = journal
+		une['URL'] = str(URL)
+		une['titre'] = titre.encode('utf8')
+		insert_une(une)
+	return True
+
 if __name__ == '__main__':
-	print True
-
-
-
+	extraction_stockage('lepoint')

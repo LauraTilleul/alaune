@@ -1,5 +1,3 @@
-# -*- coding:utf-8 -*-
- 
 import urllib, lxml.html
  
 def unes(targetURL):
@@ -13,4 +11,4 @@ def unes(targetURL):
 	doc = lxml.html.document_fromstring(data)
 	article_titles = doc.xpath('//h2[@class="art-lead"]/text()') + doc.xpath('//div[@class="col plm"]//a/h2[@class="art-title"]/text()')
  
-	return zip(article_titles, articles_href)
+        return zip(article_titles, articles_href)

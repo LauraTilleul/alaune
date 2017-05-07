@@ -1,7 +1,6 @@
-    # -*- coding:utf-8 -*-
-     
 import urllib, lxml.html
-     
+
+
 def unes(targetURL):
     file = urllib.urlopen(targetURL)
     data = file.read().decode('utf8')
@@ -17,5 +16,3 @@ def unes(targetURL):
     liens+= doc.xpath('//div[@class="title-river"]//a/@href')
    
     return zip(titres, liens)
-
-

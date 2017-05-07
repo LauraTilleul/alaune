@@ -1,0 +1,84 @@
+h1
+{
+color:white;
+text-align:center;
+background-color:#0d1a66;
+}
+h2{
+	font-size:30px;
+}
+a{ text-decoration:none;}
+
+fieldset{
+	width:30%;
+	height:120px;
+	margin:auto;
+	border : inset 2px navy;
+}
+input, select{ color: #0d1a66 ; font-size:20px; background-color:#dee7e8; margin-right:10px;}
+h3
+{
+color:white;
+text-align:center;
+background-color:  cadetblue;
+	width:80%;
+	height:30px;
+	font-size:28px;
+	margin:auto;
+	margin-bottom:15px;
+}
+
+body
+{
+background-color: #dee7e8;
+text-align:center;
+}
+
+*
+{
+background-color: #;
+text-align:center;
+}
+
+/* concept des CSS pseudo class */
+a:link {color:  cadetblue }
+a:visited{color:blue }
+a:hover{color: navy }
+a:active {color:lime }
+
+ul.menu
+{
+list-style-type: none;
+margin: 10px;
+padding: 10px;
+}
+
+ul.menu li.menuitem
+{
+display:inline-block;
+margin-left:1px;
+border: lightblue solid 1px;
+background-color: steelblue;
+padding-top: 5px;
+padding-bottom:5px;
+color: white;
+width: 12%;
+	height:30px;
+	font-size:26px;
+}
+
+ul.menu li.menuitem a
+{
+color: white;
+padding: 10px;
+text-decoration: none;
+}
+
+ul.menu li.menuitem a:hover
+{
+	background-color: white;
+	color:steelblue;
+}
+
+
+

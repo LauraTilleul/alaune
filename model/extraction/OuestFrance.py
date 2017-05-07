@@ -9,9 +9,9 @@ def unes(targetURL):
     file.close()
     
     doc = lxml.html.document_fromstring(data)
-    article_href = doc.xpath('//article[@data-vr-contentbox]/a/@href')
+    articles_href = doc.xpath('//article[@data-vr-contentbox]/a/@href')
     
     doc=lxml.html.document_fromstring(data)
     articles_titles = doc.xpath('//article[@data-vr-contentbox]//h2[@class="title "]/text()')
     
-    return zip(article_titles, articles_href)
+    return zip(articles_titles, articles_href)
